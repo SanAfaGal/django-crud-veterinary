@@ -30,7 +30,7 @@ class Pet(models.Model):
     name = models.CharField(max_length=100)
     age = models.IntegerField()
     weight = models.FloatField()
-    owner = models.ForeignKey(Customer, on_delete=models.CASCADE)
+    owner = models.ForeignKey(Customer, on_delete=models.SET_NULL)
 
     class Meta:
         db_table = "tbl_pets"
